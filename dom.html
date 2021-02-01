@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Dom</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+        border-radius: 20px;
+        margin: 5px;
+        padding: 5px;
+        }
+        .special h3{
+        }
+    </style>
+</head>
+<body>
+   <main>
+       <h3>Explore Dom</h3>
+       <article class="special">
+           <h3>artical-1</h3>
+           <p title="i am the most important" class="author">author-1</p>
+           <p class="desscription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vero nesciunt nemo suscipit quia? Molestias error repudiandae impedit tempora minus at id quam repellat libero suscipit voluptatem, esse, corrupti laboriosam.</p>
+       </article>
+       <article>
+           <h3>artical-2</h3>
+           <p class="author">author-2</p>
+           <p class="desscription">Quaerat explicabo sequi perspiciatis. Sint nemo sed vel ducimus, magnam in. Enim amet debitis mollitia sequi soluta voluptas incidunt porro molestiae explicabo, voluptatem nisi dolorem repudiandae obcaecati dignissimos, blanditiis eius.</p>
+       </article>
+       <article id="first-article">
+           <h3>artical-3</h3>
+           <p class="author">author-3</p>
+           <p class="desscription">Quas obcaecati, neque blanditiis totam rerum doloremque, debitis, culpa porro nobis ratione magnam ipsam quod cum distinctio ipsa! Quis qui, modi aperiam dolore illum vel porro facilis labore eveniet nobis.</p>
+       </article>
+       <article>
+           <h3>Grocery list </h3>
+           <ul id="gift-list">
+               <li>gift item-1</li>
+               <li>gift item-2</li>
+               <li>gift item-3</li>
+               <li>gift item-4</li>
+               <li>gift item-5</li>
+           </ul>
+       </article>
+       
+</main> 
+   <script>
+    //    document.body.style.backgroundColor ='tomato';
+    //    var authors=document.querySelectorAll('.special h3');
+    //    for(var i=0;i<authors.length;i++){
+    //        var element =authors[i];
+    //     //    console.log(element.innerHTML);
+    //        element.innerHTML='lekhok-'+ (i+1);
+    //        element.setAttribute('title','all author is same');
+    //        element.style.backgroundColor ='lightblue';
+    //        element.style.margin ='10px';
+
+    //    }
+    const article =document.getElementById('first-article');
+    const newParagraph =document.createElement('p');
+    newParagraph.innerHTML='this is added by javascript';
+    article.appendChild(newParagraph);
+    // add one more gift item
+const ul= document.getElementById('gift-list');
+const li =document.createElement('li');
+li.innerHTML='brand new gift';
+ul.appendChild(li);
+
+   </script>
+</body>
+</html>
